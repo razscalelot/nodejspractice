@@ -40,7 +40,7 @@ person.greet();
 
 const myHobbies = ["Cricket", "Cooking"];
 
-for (var hobby of myHobbies){
+for (var hobby of myHobbies) {
     console.log(hobby);
 }
 
@@ -48,3 +48,19 @@ const myHobbiesMap = ["Cricket", "Cooking"];
 console.log(myHobbiesMap.map(hobby => {
     return "map " + hobby;
 }));
+
+const copiedHobbies = [...myHobbies];
+console.log(copiedHobbies);
+
+const copiedPerson = { ...person };
+console.log(copiedPerson);
+
+const toArray = (...args) => {
+    return args;
+};
+console.log(toArray(1, 2, 3, 4, 5));
+
+const toDict = ({...args}) => {
+    return args
+};
+console.log(toDict({name: 'Raj', age: 29}));
